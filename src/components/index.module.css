@@ -1,3 +1,5 @@
+
+
 .list {
   display: grid;
   margin: 0;
@@ -52,3 +54,30 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+.firstDiv{
+  max-width: 900px;
+  margin: 0 auto;
+
+  
+}
+.firstDiv h1{
+  color: #3C4856C2;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.firstDiv h2{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.secondDiv{
+  max-width: 1200px;
+  margin: 0 auto;
+  display:flex;
+  
+  align-items:center;
+  text-align:left;
+}
+
