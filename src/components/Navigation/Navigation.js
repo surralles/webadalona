@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from 'gatsby';
 import  { Wrapper } from './Navigation.styles';
 
+
+
 const Navigation =({ menu }) => (
 
 <Wrapper>
@@ -29,9 +31,12 @@ const Navigation =({ menu }) => (
 
                 ) :null }
             </li>
+            
 
         ):null
             )}
+
+          
     </ul>
 </Wrapper>
 

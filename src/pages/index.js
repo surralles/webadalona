@@ -1,28 +1,67 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+
 import Hero from '../components/Hero/Hero'
 import SliderTop from '../components/SliderTop/SliderTop';
 
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import Layout from '../components/Layout/Layout'
-import IndexLogos from '../components/Material/IndexLogos'
-import IndexFeatures from '../components/Material/IndexFeatures'
-import Grid2 from "@mui/material/Unstable_Grid2";
+import IndexGsap from './GsapScript'
+
+import { graphql } from "gatsby"
+import { LayoutShop } from "../components/layout"
+import { ProductListing } from "../components/product-listing"
 
 
+import { css } from "@emotion/react"
+
+import {
+  container,
+  intro,
+  callOut,
+  callToAction,
+  deployButton,
+} from "./index.module.css"
 
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-]
+export const query = graphql`
+  query {
+    shopifyCollection(handle: { eq: "frontpage-1" }) {
+      products {
+        ...ProductCard
+      }
+    }
+  }
+`
+
+function HeroShop (props) {
+  return (
+    <div className={container}>
+      <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
+    
+        <>
+          <p className={callOut}>
+            It's a proof-of-concept in a box, with 10k products and 30k variants
+            to help you get to proof-of-concept as soon as right now.
+          </p>
+          <p className={callToAction}>
+            Hook it up to your own Shopify store data and start customizing in
+            minutes by deploying it to Gatsby Cloud for free. Grab your Shopify
+            store credentials and
+            <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
+              <img
+                src="https://www.gatsbyjs.com/deploynow.png"
+                alt="Deploy to Gatsby Cloud"
+                className={deployButton}
+              />
+            </a>
+          </p>
+        </>
+      
+    </div>
+  )
+}
+
 
 const moreLinks = [
   { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
@@ -47,95 +86,39 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
+  <>
+  <LayoutShop>
   <Layout>
+  
     <SliderTop/>
-  
+      <LayoutShop>
+     <HeroShop />
+     <ProductListing products={data?.shopifyCollection?.products} />
+     </LayoutShop> 
+    <IndexGsap/>
+
+    
    
-  
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={94}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-6)` }}
-      />
-       <div className={styles.firstDiv}>
-      <h1>
-        Desarrollo JAMSTACK y diseño web para el ECOMMERCE  
-      </h1>
-      <h2>Los clientes y motores de búsqueda quieren <b>sitios web rápidos</b></h2>
-      <p>En Webadalona te ofrecemos una ventaja sobre tus competidores con la última tecnología 'Headless' construyendo tiendas online modernas veloces y SEO friendly. 
-      Desde Badalona construímos tu sitio web, captando tu historia y mejorando la imagen de marca, facilitando las conversiones con herramientas de marketing. Trabajamos con:
-      </p>
-      </div>
 
-      <IndexLogos/>
-
-      <Grid2 sx={{
-    alignItems:'center',
-    maxWidth:'1200px',
-    textAlign:'left',
-    marginLeft:'auto',
-    marginRight:'auto',
-    padding:'10px'
    
     
-   }}   container  spacing={0} >
 
-      <Grid2 justifyContent="center" xs={12}  sm={5} md={5}>
-      <StaticImage
-        src="../images/central_2.jpg"
-        loading="eager"
-        width={450}
-        quality={95}
-        formats={["auto", "webp", "avif","svg"]}
-        alt=""
-        style={{ marginBottom: `var(--space-6)` }}
-      />
-      </Grid2>
-      <Grid2 xs={12}  sm={5} md={7}>
-      <h2>Descubre las modernas herramientas web</h2>
-      <p>Cada proyecto es una nueva historia, sin embargo, algunas cosas permanecen igual. 
-        Hemos elegido un conjunto de herramientas específico y encapsular los proyectos 
-        para que diferentes presupuestos puedan disfrutar del mejor rendimiento posible.</p>
-        </Grid2>
-        </Grid2>
-
-      
-
-
-      <IndexFeatures/>
-
-
-
-     
-
-      <p className={styles.intro}>
-        {" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-
-      </p>
-    </div>
-   
+  
     {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
-  
-  
-  
+
+
+
 </Layout>
+</LayoutShop> 
+
+   
+     </>
 )
 
 /**

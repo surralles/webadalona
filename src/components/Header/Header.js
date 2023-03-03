@@ -8,6 +8,7 @@ import {Wrapper, Content} from './Header.styles';
 import { graphql, useStaticQuery } from "gatsby";
 import { Script } from "gatsby";
 import { css } from "@emotion/react"
+import LogoScript from '../LogoScript';
 
 
 
@@ -47,7 +48,8 @@ const Header = () =>{
        
             
             <Content>
-            
+            <LogoScript/>
+           {/*
             <Link  to="/">
             <Script id="logoscrollsize" dangerouslySetInnerHTML={{__html:` window.onscroll = function() {
             growShrinkLogo()
@@ -80,7 +82,7 @@ const Header = () =>{
         
           `} />
                 </Link>
-                
+            */}
                 <Navigation menu={data.wpMenu.menuItems.nodes} />
             </Content>
         </Wrapper>

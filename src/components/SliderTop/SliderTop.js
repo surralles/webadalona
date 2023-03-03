@@ -91,33 +91,6 @@ import { css } from "@emotion/react"
           </Slider>
           </StyledSlider>
 
-          
-          
-         
-          <div clasName="square-wrapper">
-          <div className="square">
-          <img 
-      
-            src={image1}
-            css={css`
-            margin-top:0px;
-       
-          animation :ima 2s infinite;
-          @keyframes ima {
-            0%{
-          opacity:.6;
-            }
-            100%{
-              opacity:1;
-            }
-          }
-          }
-        
-          `}/>
-          
-          </div>
-         </div>
-          
         </div>
         
       );

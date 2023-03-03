@@ -4,11 +4,11 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
     palette: {
         primary: {
-          // Purple and green play nicely together.
-          main: '#ff6666',
+          
+          main: '#de3e66',
         },
         secondary: {
-          // This is green.A700 as hex.
+        
           main: '#11cb5f',
         },
       },
@@ -22,5 +22,28 @@ export const theme = createTheme({
       },
       
       
+});
+
+export const whiteButton = createTheme({
+  palette: {
+      primary: {
+        
+        main: '#fff',
+      },
+      secondary: {
+      
+        main: '#fff',
+      },
+    },
+  
+    typography: {
+      fontFamily: [
+        'Poppins',          
+        'Roboto',         
+        'sans-serif',  
+      ].join(','),
+    },
+    
+    
 });
 

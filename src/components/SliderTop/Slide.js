@@ -7,6 +7,7 @@ export const SlideQuery = () =>{
 
     query  {
   wpPage(databaseId: {eq: 47}) {
+   
     ACF_HomePage {
       slidertop1Image {
         localFile {

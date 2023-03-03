@@ -7,6 +7,17 @@ import CloseButton from '../../images/close_btn.svg'
 import {Overlay} from './OverlayMenu.styles'
 import { graphql, useStaticQuery } from "gatsby";
 
+const samplePageLinks = [
+  {
+    text: "Shop Webadalona",
+    url: "/shop-ecommerce",
+    badge: false,
+    description:
+      "Demo tienda online de web con arquitectura componible",
+  },
+ 
+]
+
 const OverlayMenu =({ menuOpen, callback}) => {
 
    // const { nodes } = useMenuQuery();
@@ -58,6 +69,18 @@ const OverlayMenu =({ menuOpen, callback}) => {
                     ):null
                 ))}
 
+            <li >
+            {" "}
+            {samplePageLinks.map((link, i) => (
+              <React.Fragment key={link.url}>
+                <Link to={link.url}>{link.text}</Link>
+                {i !== samplePageLinks.length - 1 && <> <br/> </>}
+              </React.Fragment>
+            ))}
+    
+         
+          </li>
+          
             </ul>
             <div 
             className="closeButton"

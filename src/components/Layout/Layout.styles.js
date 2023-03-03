@@ -2,6 +2,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const Primary = styled.main`
   padding: 0px 0 0 0;
+  background:#fff;
+  position: relative;
+  z-index: 1;
 `;
 
 export const GlobalStyles = createGlobalStyle`
@@ -22,11 +25,13 @@ export const GlobalStyles = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     overflow-y: hidden;
+     background-color:#fff
   }
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
   }
 
   .whiteText {
@@ -82,7 +87,7 @@ export const GlobalStyles = createGlobalStyle`
   strong {
     font-weight: inherit;
     font-weight: bolder;
-    color:#ff6666;
+    color:#de3e66;
   }
   dfn {
     font-style: italic;
@@ -251,8 +256,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
-    color: #000;
+  
+    color: #de3e66;
   }
 
   p {

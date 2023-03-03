@@ -15,10 +15,6 @@ export const StyledSlider = styled.div`
     display:block ;
     width:40px;
     height:40px;
-    
-    
-
-
 
   }
 
@@ -41,13 +37,9 @@ export const WrapperSlider = styled.div`
   position: relative;
 `
 
-
-
 export const StyledImg = styled(GatsbyImage)`
 min-height: 900px;
 margin-bottom: 30px;
-
-
 `;
 
 export const SlideWrapper = styled.div`
@@ -62,14 +54,11 @@ export const SlideWrapper = styled.div`
   width: 100%;
 
   h1 {
-    
-    
     color: #fff;
     text-transform: none;
     text-align: left;
     line-height:1.5em;
     max-width:650px;
-
 
     @media screen and (min-width: 768px) {
       font-size: 2.7rem;
@@ -78,9 +67,7 @@ export const SlideWrapper = styled.div`
   }
 `
 
-
 export const SliderText = styled.div`
-
 
   h2 {
     font-size: 3rem;
@@ -89,7 +76,6 @@ export const SliderText = styled.div`
     text-transform: none;
     text-align: center;
 
-  
   }
 `
 

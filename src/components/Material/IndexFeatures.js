@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "gatsby"
 import Button from "@mui/material/Button";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { styled } from '@mui/material/styles';
@@ -13,18 +14,6 @@ import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material/styles';
 import InfoIcon from '@mui/icons-material/Info';
 
-
-import logo1 from "../../images/algolia.png";
-import logo2 from "../../images/gatsbyjs.jpg";
-import logo3 from "../../images/graphql.png";
-import logo4 from "../../images/gsap.jpg";
-import logo5 from "../../images/hubspot.png";
-import logo6 from "../../images/analytics.jpg";
-import logo7 from "../../images/mailchimp.png";
-import logo8 from "../../images/react.jpg";
-import logo9 from "../../images/shopify.png";
-import logo10 from "../../images/woocommerce.jpg";
-import logo11 from "../../images/wordpress.jpg";
 import { ContentFeatures} from './IndexFeatures.styles';
 import {theme } from './MaterialTheme'
 
@@ -42,7 +31,7 @@ const IndexFeatures = () =>{
         }));
 
         const ColorButton = styled(Button)(({ theme }) => ({
-            color:'#ffffff',
+            color:'#de3e66',
             
             '&:hover': {
              
@@ -65,10 +54,10 @@ const IndexFeatures = () =>{
          <Item elevation ={4}>
          <Card >
          <StaticImage
-       src="../../images/example.png"
+       src="../../images/ecommerce.png"
        
         loading="eager"
-        width={120}
+        width={280}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -76,7 +65,7 @@ const IndexFeatures = () =>{
       />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                Ecommerce
+                Qué Ecommerce elegir
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                 Especializados en comercio electrónico. Adaptamos sistemas de Ecommerce a la vanguardia de la innovación
@@ -85,8 +74,9 @@ const IndexFeatures = () =>{
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre Ecommerce</ColorButton>
-                
+            <Link to="/diferencias-ecommerce">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre Ecommerce</ColorButton>
+            </Link>
             </CardActions>
              </Card>
              </Item>
@@ -96,7 +86,7 @@ const IndexFeatures = () =>{
             <Item elevation ={4}>
             <Card >
              <StaticImage
-                src="../../images/example.png"
+                src="../../images/shopify_why.png"
                 loading="eager"
                 width={120}
                 quality={95}
@@ -109,14 +99,15 @@ const IndexFeatures = () =>{
                 Por qué Shopify
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
-                Shopify Plus es una plataforma de comercio electrónico de nivel empresarial
+                Shopify es una plataforma de comercio electrónico de nivel empresarial
                 ideal para empresas que buscan una solución escalable, flexible, confiable
                 y segura con funciones avanzadas y soporte 24/7.
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre Shopify</ColorButton>
-                
+            <Link to="/sobre-shopify">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre Shopify</ColorButton>
+            </Link> 
             </CardActions>
              </Card>
              </Item>
@@ -125,9 +116,9 @@ const IndexFeatures = () =>{
                 <Item elevation ={4}>
             <Card >
              <StaticImage
-                src="../../images/example.png"
+                src="../../images/headless.png"
                 loading="eager"
-                width={120}
+                width={180}
                 quality={95}
                 formats={["auto", "webp", "avif"]}
                 alt=""
@@ -145,8 +136,9 @@ const IndexFeatures = () =>{
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre ventajas del desarrollo Headless</ColorButton>
-                
+            <Link to="/desarrollo-headless">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre ventajas del desarrollo Headless</ColorButton>
+            </Link>
             </CardActions>
              </Card>
              </Item>
@@ -155,9 +147,9 @@ const IndexFeatures = () =>{
                 <Item elevation ={4}>
             <Card >
              <StaticImage
-                src="../../images/example.png"
+                src="../../images/jamstack.png"
                 loading="eager"
-                width={120}
+                width={220}
                 quality={95}
                 formats={["auto", "webp", "avif"]}
                 alt=""
@@ -175,8 +167,9 @@ const IndexFeatures = () =>{
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre la metodología Jamstack</ColorButton>
-                
+            <Link to="/universo-jamstack-comercio-online">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre la metodología Jamstack</ColorButton>
+              </Link>  
             </CardActions>
              </Card>
              </Item>
@@ -185,9 +178,9 @@ const IndexFeatures = () =>{
                 <Item elevation ={4}>
             <Card >
              <StaticImage
-                src="../../images/example.png"
+                src="../../images/woocommerce.png"
                 loading="eager"
-                width={120}
+                width={180}
                 quality={95}
                 formats={["auto", "webp", "avif"]}
                 alt=""
@@ -206,8 +199,9 @@ const IndexFeatures = () =>{
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre el desarrollo con Woocommerce</ColorButton>
-                
+            <Link to="/caratcteristicas-clave-woocommerce-emprendedores">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre el desarrollo con Woocommerce</ColorButton>
+              </Link>  
             </CardActions>
              </Card>
              </Item>
@@ -216,9 +210,9 @@ const IndexFeatures = () =>{
                 <Item elevation ={4}>
             <Card >
              <StaticImage
-                src="../../images/example.png"
+                src="../../images/design.png"
                 loading="eager"
-                width={120}
+                width={180}
                 quality={95}
                 formats={["auto", "webp", "avif"]}
                 alt=""
@@ -235,8 +229,9 @@ const IndexFeatures = () =>{
                  </Typography>
             </CardContent>
             <CardActions>
-                <ColorButton variant="contained" startIcon={<InfoIcon />} size="small">Más sobre el Diseño Web</ColorButton>
-                
+            <Link to="/diseno-web">
+                <ColorButton variant="outlined" startIcon={<InfoIcon />} size="small">Más sobre el Diseño Web</ColorButton>
+               </Link> 
             </CardActions>
              </Card>
              </Item>

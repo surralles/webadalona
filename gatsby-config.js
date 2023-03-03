@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Webadalona`,
@@ -15,6 +17,23 @@ module.exports = {
     siteUrl: `https://webadalona.es/`,
   },
   plugins: [
+
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        password: process.env.SHOPIFY_APP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        shopifyConnections: ["collections"],
+      },
+    },
+
+    {
+      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+      options: {
+          key: `AIzaSyBEKS2fj1nAFH3FnRBVvA9Zf7_OFKBQ4wM`,
+          center: `41.44224918854802, 2.2383211844614177`,
+      },
+  },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     {
