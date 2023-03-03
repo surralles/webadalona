@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Layout } from "../../../components/layout"
+import { LayoutShop} from "../../../components/layout"
 import { ProductListing } from "../../../components/product-listing"
 import { Seo } from "../../../components/seo"
 import slugify from "@sindresorhus/slugify"
@@ -12,7 +12,7 @@ export default function ProductTypeIndex({
   pageContext: { productType },
 }) {
   return (
-    <>
+    <LayoutShop>
       <h1 className={title}>{productType}</h1>
       <ProductListing products={products.nodes} />
       {products.pageInfo.hasNextPage && (
@@ -20,7 +20,7 @@ export default function ProductTypeIndex({
           More Products
         </MoreButton>
       )}
-    </>
+    </LayoutShop>
   )
 }
 
