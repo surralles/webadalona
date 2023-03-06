@@ -6,6 +6,7 @@ import { Seo } from "../../components/seo"
 import { MoreButton } from "../../components/more-button"
 import { title } from "./index.module.css"
 
+
 export default function Products({ data: { products } }) {
   return (
     <LayoutShop>
@@ -19,7 +20,7 @@ export default function Products({ data: { products } }) {
   )
 }
 
-
+export const Head = () => <Seo title="Todos los producosde Webadalona" />
 
 export const query = graphql`
   {

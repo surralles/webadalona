@@ -1,8 +1,9 @@
 import * as React from "react"
+import { useState, useContext, useCallback, useEffect } from "react";
 import { graphql, Link } from "gatsby"
 import { LayoutShop } from "../../../components/layout"
 import isEqual from "lodash.isequal"
-import { GatsbyImage, getSrc } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { StoreContext } from "../../../context/store-context"
 import { AddToCart } from "../../../components/add-to-cart"
 import { NumericInput } from "../../../components/numeric-input"
@@ -41,18 +42,18 @@ export default function Product({ data: { product, suggestions } }) {
 
 
   
-  const { client } = React.useContext(StoreContext)
-  const [variant, setVariant] = React.useState({ ...initialVariant })
-  const [quantity, setQuantity] = React.useState(1)
+  const { client } = useContext(StoreContext)
+  const [variant, setVariant] = useState({ ...initialVariant })
+  const [quantity, setQuantity] = useState(1)
 
   const productVariant =
     client.product.helpers.variantForOptions(product, variant) || variant
 
-  const [available, setAvailable] = React.useState(
+  const [available, setAvailable] = useState(
     productVariant.availableForSale
   )
 
-  const checkAvailablity = React.useCallback(
+  const checkAvailablity = useCallback(
     (productId) => {
       client.product.fetch(productId).then((fetchedProduct) => {
         const result =
@@ -89,7 +90,7 @@ export default function Product({ data: { product, suggestions } }) {
     setVariant({ ...selectedVariant })
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     checkAvailablity(product.storefrontId)
   }, [productVariant.storefrontId, checkAvailablity, product.storefrontId])
 
@@ -114,20 +115,21 @@ export default function Product({ data: { product, suggestions } }) {
                 aria-describedby="instructions"
               >
                 <ul className={productImageList}>
-                  {media.map((image, index) => (
+                  {media.map((images, index) => (
                     <li
-                      key={`product-image-${image.id}`}
+                      key={`product-image-${images.id}`}
                       className={productImageListItem}
                     >
                       <GatsbyImage
                         objectFit="contain"
                         loading={index === 0 ? "eager" : "lazy"}
                         alt={
-                          image.altText
-                            ? image.altText
+                          images.preview.image.altText
+                            ? images.preview.image.altText
                             : `Product Image of ${title} #${index + 1}`
                         }
-                        image={image.preview.image.gatsbyImageData}
+                        image={images.preview.image.gatsbyImageData}
+                        src={''}
                       />
                     </li>
                   ))}
@@ -135,7 +137,7 @@ export default function Product({ data: { product, suggestions } }) {
               </div>
               {hasMultipleImages && (
                 <div className={scrollForMore} id="instructions">
-                  <span aria-hidden="true">←</span> scroll for more{" "}
+                  <span aria-hidden="true">←</span> scroll for more{""}
                   <span aria-hidden="true">→</span>
                 </div>
               )}
@@ -186,6 +188,7 @@ export default function Product({ data: { product, suggestions } }) {
                 variantId={productVariant.storefrontId}
                 quantity={quantity}
                 available={available}
+                
               />
             </div>
             <div className={metaSection}>
@@ -195,8 +198,8 @@ export default function Product({ data: { product, suggestions } }) {
               </span>
               <span className={labelFont}>Tags</span>
               <span className={tagList}>
-                {product.tags.map((tag) => (
-                  <Link to={`/search?t=${tag}`}>{tag}</Link>
+                {product.tags.map((tag, shopifyId) => (
+                  <Link key={ shopifyId} to={`/search?t=${tag}`}>{tag}</Link>
                 ))}
               </span>
             </div>

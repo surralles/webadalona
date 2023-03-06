@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useContext } from "react";
 import { Link } from "gatsby"
 import { LayoutShop } from "../components/layout"
 import { StoreContext } from "../context/store-context"
@@ -20,10 +21,11 @@ import {
   emptyStateLink,
   title,
 } from "./cart.module.css"
+import Seo from "../components/seo"
 
 
 export default function CartPage() {
-  const { checkout, loading } = React.useContext(StoreContext)
+  const { checkout, loading } = useContext(StoreContext)
   const emptyCart = checkout.lineItems.length === 0
 
   const handleCheckout = () => {
@@ -120,3 +122,6 @@ export default function CartPage() {
     </LayoutShop>
   )
 }
+
+
+export const Head = () => <Seo />

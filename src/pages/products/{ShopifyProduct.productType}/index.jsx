@@ -7,6 +7,7 @@ import slugify from "@sindresorhus/slugify"
 import { MoreButton } from "../../../components/more-button"
 import { title } from "../index.module.css"
 
+
 export default function ProductTypeIndex({
   data: { products },
   pageContext: { productType },
@@ -24,6 +25,9 @@ export default function ProductTypeIndex({
   )
 }
 
+export const Head = ({ pageContext: { productType } }) => (
+  <Seo title={`Category: ${productType}`} />
+)
 
 
 export const query = graphql`

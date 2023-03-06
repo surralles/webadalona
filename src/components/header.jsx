@@ -5,6 +5,7 @@ import { CartButton } from "./cart-button"
 import { StoreContext } from "../context/store-context"
 import { Navigation } from "./navigation"
 import SearchIcon from "../icons/search"
+import {  useContext } from "react";
 
 
 
@@ -18,7 +19,7 @@ import {
 
 export function Header() {
   
-  const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
+  const { checkout, loading, didJustAddToCart } = useContext(StoreContext)
 
   const items = checkout ? checkout.lineItems : []
 

@@ -10,3 +10,6 @@ import * as React from "react"
 import "./src/styles/reset.css"
 import "./src/styles/variables.css"
 import "./src/styles/global.css"
+import CombinedProvider from "./src/context/CombinedProvider"
+
+export const wrapRootElement = CombinedProvider

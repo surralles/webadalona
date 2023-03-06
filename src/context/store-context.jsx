@@ -1,11 +1,12 @@
 import * as React from "react"
+import { useState, createContext, useEffect,useContext } from "react";
 import fetch from "isomorphic-fetch"
 import Client from "shopify-buy"
 
 const client = Client.buildClient(
   {
-    domain: 'webadalona-ecommerce.myshopify.com',
-    storefrontAccessToken: '9817ccaacab74cd2aac18ed27a10591f',
+    domain: process.env.GATSBY_SHOPIFY_STORE_URL,
+    storefrontAccessToken: process.env.GATSBY_STOREFRONT_ACCES_TOKEN,
   },
   fetch
 )
@@ -25,15 +26,15 @@ const defaultValues = {
   },
 }
 
-export const StoreContext = React.createContext(defaultValues)
+export const StoreContext = createContext(defaultValues)
 
 const isBrowser = typeof window !== `undefined`
-const localStorageKey = `shopify_checkout_id`
+const localStorageKey = `shopify_checkout_id`;
 
 export const StoreProvider = ({ children }) => {
-  const [checkout, setCheckout] = React.useState(defaultValues.checkout)
-  const [loading, setLoading] = React.useState(false)
-  const [didJustAddToCart, setDidJustAddToCart] = React.useState(false)
+  const [checkout, setCheckout] = useState(defaultValues.checkout)
+  const [loading, setLoading] = useState(false)
+  const [didJustAddToCart, setDidJustAddToCart] = useState(false)
 
   const setCheckoutItem = (checkout) => {
     if (isBrowser) {
@@ -43,7 +44,7 @@ export const StoreProvider = ({ children }) => {
     setCheckout(checkout)
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const initializeCheckout = async () => {
       const existingCheckoutID = isBrowser
         ? localStorage.getItem(localStorageKey)

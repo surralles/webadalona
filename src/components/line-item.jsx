@@ -6,6 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
 import DeleteIcon from "../icons/delete"
 import { NumericInput } from "./numeric-input"
+import { useState, useContext, useCallback, useMemo } from "react";
 import {
   title,
   remove,
@@ -20,8 +21,8 @@ export function LineItem({ item }) {
     checkout,
     updateLineItem,
     loading,
-  } = React.useContext(StoreContext)
-  const [quantity, setQuantity] = React.useState(item.quantity)
+  } = useContext(StoreContext)
+  const [quantity, setQuantity] = useState(item.quantity)
 
   const variantImage = {
     ...item.variant.image,
@@ -46,7 +47,7 @@ export function LineItem({ item }) {
     300
   )
   // eslint-disable-next-line
-  const debouncedUli = React.useCallback((value) => uli(value), [])
+  const debouncedUli = useCallback((value) => uli(value), [])
 
   const handleQuantityChange = (value) => {
     if (value !== "" && Number(value) < 1) {
@@ -66,7 +67,7 @@ export function LineItem({ item }) {
     handleQuantityChange(Number(quantity || 0) - 1)
   }
 
-  const image = React.useMemo(
+  const image = useMemo(
     () =>
       getShopifyImage({
         image: variantImage,
