@@ -3,7 +3,7 @@ import * as React from "react"
 import Hero from '../components/Hero/Hero'
 import SliderTop from '../components/SliderTop/SliderTop';
 
-import Seo from "../components/seo"
+import { Seo } from "../components/seo"
 import * as styles from "../components/index.module.css"
 import Layout from '../components/Layout/Layout'
 import IndexGsap from './GsapScript'
