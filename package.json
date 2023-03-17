@@ -16,8 +16,10 @@
     "gatsby-plugin-emotion": "^8.3.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.2.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^5.2.0",
     "gatsby-plugin-material-ui": "^4.0.2",
+    "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-sharp": "^5.2.0",
     "gatsby-plugin-styled-components": "^6.2.0",
     "gatsby-source-filesystem": "^5.2.0",
@@ -26,11 +28,13 @@
     "gatsby-transformer-sharp": "^5.2.0",
     "graphql": "^16.6.0",
     "gsap": "^3.11.4",
+    "i18next": "^22.4.11",
     "isomorphic-fetch": "^3.0.0",
     "locomotive-scroll": "^4.1.4",
     "lodash.isequal": "^4.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-slick": "^0.29.0",
     "shopify-buy": "^2.18.0",
     "slick-carousel": "^1.8.1",
@@ -38,7 +42,8 @@
     "urql": "^3.0.3"
   },
   "devDependencies": {
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.0",
+    "webpack": "^5.75.0"
   },
   "keywords": [
     "gatsby"

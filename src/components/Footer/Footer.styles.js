@@ -56,7 +56,14 @@ height:100%;
 `
 
 export const FirstColumn = styled.div`
-margin-right:50px
+margin-right:50px;
+h5{
+  line-height:1.3em;
+  margin-bottom:15px;
+  font-size:1em;
+  text-transform: lowercase;
+  color:#fff
+}
 `
 export const Adress= styled.div`
 min-width:200px;

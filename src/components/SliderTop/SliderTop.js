@@ -11,6 +11,8 @@ import { css } from "@emotion/react"
 
 
 
+
+
  const SliderTop =()=> {
 
       const settings = {
@@ -24,11 +26,11 @@ import { css } from "@emotion/react"
         autoplaySpeed: 4000,
         cssEase: "linear"
       };
-
-      const {wpPage:{ACF_HomePage:data},
+    
+      const {wpPage:{ACF_HomePage:data}, code:$language
     }= SlideQuery();
     
-   
+    
   
       
 
@@ -46,7 +48,8 @@ import { css } from "@emotion/react"
           <StyledImg image ={getImage(data.slidertop1Image.localFile)} alt="Hero image"/>
          
           <SlideWrapper>
-            <h1>{data.slidertop1Title}</h1>
+          <h1>{data.slidertop1Title}
+            </h1>  
           </SlideWrapper>
           </WrapperSlider>
 

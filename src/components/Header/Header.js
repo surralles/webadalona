@@ -1,19 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
+
 import Navigation from '../Navigation/Navigation'
 
 import Logo from '../../images/designingecommerce_600.gif';
 //import { useMenuQuery } from '../../hooks/useMenuQuery';
 import {Wrapper, Content} from './Header.styles';
+import './header.module.css';
+
 import { graphql, useStaticQuery } from "gatsby";
 import { Script } from "gatsby";
 import { css } from "@emotion/react"
 import LogoScript from '../LogoScript';
 
 
+import styles from "./header.module.css"
 
 const Header = () =>{
 
+  //const {language:activeLanguage,languages, originalPath, t, i18n } = useI18next();
+  //const availableLanguages = languages.filter((language) => language !== activeLanguage);
     //const {wpMenu} = useMenuQuery();
  
     
@@ -41,6 +46,8 @@ const Header = () =>{
       }
       `
     )
+
+  
     
 
     return(
@@ -83,8 +90,24 @@ const Header = () =>{
           `} />
                 </Link>
             */}
-                <Navigation menu={data.wpMenu.menuItems.nodes} />
+       <Navigation menu={data.wpMenu.menuItems.nodes} />
+
+      
+               
             </Content>
+
+           {/*  
+           "Language Switcher"
+           <ul className="languages">
+        {availableLanguages.map((lng) => (
+          <li key={lng}>
+            <Link to={originalPath} language={lng} className="toggle">
+          {lng.toUpperCase()}
+              {lng}
+            </Link>
+          </li>
+        ))}
+      </ul>*/}
         </Wrapper>
     )
 }

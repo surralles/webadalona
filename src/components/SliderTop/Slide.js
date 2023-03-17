@@ -1,10 +1,8 @@
-
 import {useStaticQuery,graphql} from 'gatsby';
 
 export const SlideQuery = () =>{
 
     const data = useStaticQuery(graphql`
-
     query  {
   wpPage(databaseId: {eq: 47}) {
    

@@ -18,6 +18,8 @@ module.exports = {
   },
   plugins: [
 
+    
+
     {
       resolve: "gatsby-source-shopify",
       options: {
@@ -26,6 +28,12 @@ module.exports = {
         shopifyConnections: ["collections"],
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: process.env.MAILCHIMP_ENDPOINT, 
+      },
+  },
 
     {
       resolve: `@ccalamos/gatsby-source-googlemaps-static`,
@@ -43,6 +51,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -50,7 +60,7 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
-        start_url: `/`,
+       
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/

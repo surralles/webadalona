@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import { Link } from 'gatsby';
+
 import InvertedLogo from '../../images/logo-inverted.svg'
 import Logo from '../../images/designingecommerce_600.gif';
 import CloseButton from '../../images/close_btn.svg'
 //import { useMenuQuery } from '../../hooks/useMenuQuery';
 import {Overlay} from './OverlayMenu.styles'
 import { graphql, useStaticQuery } from "gatsby";
-
+import {Link } from 'gatsby-plugin-react-i18next';
 const samplePageLinks = [
   {
     text: "Shop Webadalona",

@@ -25,7 +25,7 @@ const ArchiveSidebar = ({ catId, categories }) => {
                 </li>
                 {sortedCategories.map(cat => {
           if (cat.node.count !== 0) {
-            return cat.node.slug !== 'uncategorized' ? (
+            return cat.node.slug !== 'sin-categoria-es'  ? (
               <li key={cat.node.id}>
                 <span className="count">{cat.node.count}</span>
                 <Link

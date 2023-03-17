@@ -12,16 +12,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import { getImage } from "gatsby-plugin-image"
 import { useMapQuery } from "../../hooks/useMapQuery"
-
-
- 
- 
-
-
-
-
-
-
+import App from "../ScrollStarter/App";
 
 const Footer = () => {
   const ColorButton = styled(Button)(({ theme }) => ({
@@ -90,14 +81,17 @@ console.log(data)
   return(
   <>
   <ThemeProvider theme={whiteButton}>
+ 
   <Wrapper>
   
     <FixedWrapper>
     <FooterWrapper>
     
       <FirstColumn>
-     
-      <h1>Hablamos</h1> 
+      <h1>Hablamos,</h1> 
+      <h5>Establecido en Badalona después de 15 años<br/>
+       de experiencia en el sector para dar servicio a <br/>
+       profesionales, pequeñas y medianas empresas. </h5>
     
       <p>Cuéntame sobre tu proyecto o tus dudas<br/>y configuramos un plan viable.</p>
        <p><a href="mailto:jordi@webadalona.es">
