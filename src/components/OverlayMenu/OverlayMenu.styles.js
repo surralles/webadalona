@@ -42,17 +42,18 @@ export const Overlay = styled.div`
    
      
     .invertedLogo {
-      max-width: 100px;
+     
       margin: 0 0 60px 0;
+      width:80px;
     }
 
     .overlayMenu {
-      text-align: center;
+      text-align: left;
       list-style-type: none;
       margin: 0;
 
       li {
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
       }
 
       li.overlayActive {
@@ -66,6 +67,7 @@ export const Overlay = styled.div`
         transition: all 0.3s ease;
         text-decoration: none;
         font-weight:700,
+        line-height:.7em!important;
 
         :hover {
           color: #ee2562;
@@ -120,5 +122,18 @@ export const Overlay = styled.div`
       transform: translateX(0);
     }
   }
+
+  @media (max-width: 800px) {
+    a{
+      font-size:1em!important;
+    };
+    .inner{
+      width:100%
+    }
+    .inner-contact{
+      display:none;
+    }
+  }
+
 
 `;

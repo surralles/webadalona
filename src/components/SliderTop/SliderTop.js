@@ -1,16 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { SliderText,StyledImg,WrapperSlider,SlideWrapper,StyledSlider} from "./SliderTop.styles"
-import {getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { StyledImg,WrapperSlider,SlideWrapper,StyledSlider} from "./SliderTop.styles"
+import {getImage } from 'gatsby-plugin-image';
 import { SlideQuery } from "./Slide";
-import image1 from "../../images/example.png";
-import styled from "@emotion/styled"
-import { css } from "@emotion/react"
-
-
-
 
 
  const SliderTop =()=> {
@@ -27,13 +21,9 @@ import { css } from "@emotion/react"
         cssEase: "linear"
       };
     
-      const {wpPage:{ACF_HomePage:data}, code:$language
+      const {wpPage:{ACF_HomePage:data}
     }= SlideQuery();
     
-    
-  
-      
-
       return (
       
         <div>
@@ -45,52 +35,48 @@ import { css } from "@emotion/react"
                   
          < WrapperSlider >
        
-          <StyledImg image ={getImage(data.slidertop1Image.localFile)} alt="Hero image"/>
+          <StyledImg image ={getImage(data.slidertop1Image.localFile)} alt="Web realizada por Webadalona"/>
          
           <SlideWrapper>
-          <h1>{data.slidertop1Title}
-            </h1>  
+          <h1><a href="https://cottonandbuttons.com/">{data.slidertop1Title}</a> </h1>  
           </SlideWrapper>
           </WrapperSlider>
 
           < WrapperSlider>
-          <StyledImg image ={getImage(data.slidertop2Image.localFile)} alt="Hero image" />
+          <StyledImg image ={getImage(data.slidertop2Image.localFile)} alt="Web realizada por Webadalona" />
           <SlideWrapper>
-            <h1>{data.slidertop2Title}</h1>
+            <h1><a href="https://b2b-asesores.com/">{data.slidertop2Title}</a></h1>
           </SlideWrapper>
           </WrapperSlider>
          
           < WrapperSlider>
-          <StyledImg image ={getImage(data.slidertop3Image.localFile)} alt="Hero image" />
+          <StyledImg image ={getImage(data.slidertop3Image.localFile)} alt="Web realizada por Webadalona" />
           <SlideWrapper>
-            <h1>{data.slidertop3Title}</h1>
+            <h1><a href="https://www.coptest.es/">{data.slidertop3Title}</a></h1>
           </SlideWrapper>
           </WrapperSlider>
          
           < WrapperSlider>
-          <StyledImg image ={getImage(data.slidertop4Image.localFile)} alt="Hero image" />
+          <StyledImg image ={getImage(data.slidertop4Image.localFile)} alt="Web realizada por Webadalona" />
           <SlideWrapper>
-            <h1>{data.slidertop4Title}</h1>
+            <h1><a href="https://clinicadentalmarmol.com/">{data.slidertop4Title}</a></h1>
           </SlideWrapper>
           </WrapperSlider>
          
           < WrapperSlider>
-          <StyledImg image ={getImage(data.slidertop5Image.localFile)} alt="Hero image" />
+          <StyledImg image ={getImage(data.slidertop5Image.localFile)} alt="Web realizada por Webadalona" />
           <SlideWrapper>
-            <h1>{data.slidertop5Title}</h1>
+            <h1><a href="https://www.abrildissenys.com/">{data.slidertop5Title}</a></h1>
           </SlideWrapper>
           </WrapperSlider>
          
           < WrapperSlider>
-          <StyledImg image ={getImage(data.slidertop6Image.localFile)} alt="Hero image" />
+          <StyledImg image ={getImage(data.slidertop6Image.localFile)} alt="Web realizada por Webadalona" />
           <SlideWrapper>
-            <h1>{data.slidertop6Title}</h1>
+            <h1><a href="https://starblau.com/">{data.slidertop6Title}</a></h1>
           </SlideWrapper>
           </WrapperSlider>
-         
-    
 
-         
           </Slider>
           </StyledSlider>
 
@@ -99,9 +85,6 @@ import { css } from "@emotion/react"
       );
     
   }
-
-
-
 
   export default SliderTop
 

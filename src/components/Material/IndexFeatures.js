@@ -7,7 +7,6 @@ import Paper from "@mui/material/Paper";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -17,12 +16,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import { ContentFeatures} from './IndexFeatures.styles';
 import {theme } from './MaterialTheme'
 
-
-
-
 import { StaticImage } from "gatsby-plugin-image";
-
-
 
 const IndexFeatures = () =>{
 

@@ -28,6 +28,7 @@ import {
   metaSection,
   productDescription,
 } from "./product-page.module.css"
+import Layout from "../../../components/Layout/Layout";
 
 export default function Product({ data: { product, suggestions } }) {
   const {
@@ -104,6 +105,7 @@ export default function Product({ data: { product, suggestions } }) {
   const hasMultipleImages = true || media.length > 1
 
   return (
+    <Layout>
     <LayoutShop>
       <div className={container}>
         <div className={productBox}>
@@ -207,6 +209,7 @@ export default function Product({ data: { product, suggestions } }) {
         </div>
       </div>
     </LayoutShop>
+    </Layout>
   )
 }
 

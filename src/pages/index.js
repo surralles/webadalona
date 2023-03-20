@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import Hero from '../components/Hero/Hero'
 import SliderTop from '../components/SliderTop/SliderTop';
 
 import { Seo } from "../components/seo"
@@ -19,15 +18,12 @@ import Button from "@mui/material/Button";
 import { styled } from '@mui/material/styles';
 import {theme } from '../components/Material/MaterialTheme'
 
-import ProductAnimation from "../components/ProductAnimation/ProductAnimation";
-import { css } from "@emotion/react"
 import App from "../components/ScrollStarter/App";
 import {
   container,
   intro,
   callOut,
-  callToAction,
-  deployButton,
+  
 } from "./index.module.css"
 
 export const wquery = graphql`
@@ -48,54 +44,16 @@ export const wquery = graphql`
 function HeroShop (props) {
   return (
     <div className={container}>
-      <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
-    
+      <h1 className={intro}>DEMO módulo conectado a tienda Shopify</h1>
         <>
           <p className={callOut}>
-            It's a proof-of-concept in a box, with 10k products and 30k variants
-            to help you get to proof-of-concept as soon as right now.
-          </p>
-          <p className={callToAction}>
-            Hook it up to your own Shopify store data and start customizing in
-            minutes by deploying it to Gatsby Cloud for free. Grab your Shopify
-            store credentials and
-            <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
-              <img
-                src="https://www.gatsbyjs.com/deploynow.png"
-                alt="Deploy to Gatsby Cloud"
-                className={deployButton}
-              />
-            </a>
+            Entra en la tienda y comprueba la velocidad de navegación en una web desacoplada donde el frontend 
+            y el backend van por caminos distintos conectados por una API.
           </p>
         </>
-      
     </div>
   )
 }
-
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = ({ data }) => {
 
@@ -115,24 +73,15 @@ const IndexPage = ({ data }) => {
   <Layout>
   
     <SliderTop/>
-      <LayoutShop>
-     <HeroShop />
-     <ProductListing products={data?.shopifyCollection?.products} />
-     </LayoutShop> 
+     
     <IndexGsap/>
   
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-
-
-
-
-
-<Grid2 sx={{
+     <HeroShop />
+     <LayoutShop>
+     <ProductListing products={data?.shopifyCollection?.products} />
+     </LayoutShop> 
+  
+  <Grid2 sx={{
     alignItems:'center',
     maxWidth:'1200px',
     textAlign:'left',
@@ -153,7 +102,7 @@ const IndexPage = ({ data }) => {
         style={{ marginBottom: `var(--space-6)` }}
       />
       </Grid2>
-<Grid2 xs={12}  sm={5} md={7}>
+  <Grid2 xs={12}  sm={5} md={7}>
 
 <div className={styles.secondDiv}>
 <h1>
@@ -186,11 +135,7 @@ Ejemplo de guía y marketing implementado
 )
 }
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
+
 export const Head = () => <Seo title="" />
 
 export default IndexPage

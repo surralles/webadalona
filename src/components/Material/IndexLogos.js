@@ -1,7 +1,5 @@
 import * as React from 'react';
-import Button from "@mui/material/Button";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import logo1 from "../../images/algolia.png";
 import logo2 from "../../images/gatsbyjs.jpg";
 import logo3 from "../../images/graphql.png";
 import logo4 from "../../images/gsap.jpg";
@@ -14,13 +12,7 @@ import logo10 from "../../images/woocommerce.jpg";
 import logo11 from "../../images/wordpress.jpg";
 import { ContentLogos} from './IndexLogos.styles';
 
-
-
-import { StaticImage } from "gatsby-plugin-image";
-
-
 const IndexLogos = () =>{
-
 
     return(
          <>
@@ -61,10 +53,8 @@ const IndexLogos = () =>{
             </ContentLogos>
             </>
 
-
         );
     
-
 }
 
 export default IndexLogos;

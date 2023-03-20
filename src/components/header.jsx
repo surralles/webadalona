@@ -6,9 +6,6 @@ import { StoreContext } from "../context/store-context"
 import { Navigation } from "./navigation"
 import SearchIcon from "../icons/search"
 import {  useContext } from "react";
-
-
-
 import {
   header,
   container,
@@ -27,9 +24,6 @@ export function Header() {
     return total + item.quantity
   }, 0)
   
-
-  
-
   return (
     <div className={container}>
       <header className={header}>

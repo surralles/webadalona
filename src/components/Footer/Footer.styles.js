@@ -5,6 +5,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const StyledImg = styled(GatsbyImage)`
   max-width: 300px;
   max-height: 300px;
+  @media (max-width: 600px){
+    max-height: 100px;
+  }
   
 `
 export const Wrapper = styled.footer`
@@ -14,9 +17,6 @@ position: sticky;
   width: 100%;
   height:100;
   background-image: linear-gradient(to right, #fc5c7d, #8f329a);
-  
-  
-  
   text-align:left;
 `;
 
@@ -68,10 +68,12 @@ h5{
 export const Adress= styled.div`
 min-width:200px;
 h3{
-  color:#fff
+  color:#fff;
+  margin-bottom:10px
 }
 p{
-  font-size:1em
+  font-size:1em;
+  line-height:1em;
 }
 `
 
@@ -82,7 +84,8 @@ a{
   color:#fff
 };
 h3{
-  color:#fff
+  color:#fff;
+  margin-bottom:10px
 }
 `
 ;

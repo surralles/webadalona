@@ -6,8 +6,7 @@ import PageHero from '../components/PageHero/PageHero'
 import * as styles from "../components/index.module.css"
 import Seo from "../components/seo"
 import Grid2 from "@mui/material/Unstable_Grid2";
-import { useEffect, useRef,useLayoutEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger.js"
+import { useEffect, useRef} from "react";
 import { gsap } from "gsap";
 
 

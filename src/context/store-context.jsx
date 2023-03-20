@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, createContext, useEffect,useContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import fetch from "isomorphic-fetch"
 import Client from "shopify-buy"
 

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-
-
-
 export const Wrapper = styled.header`
   background: transparent;
   height: 60px;

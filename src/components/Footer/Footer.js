@@ -9,18 +9,14 @@ import { styled } from '@mui/material/styles';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 import { getImage } from "gatsby-plugin-image"
 import { useMapQuery } from "../../hooks/useMapQuery"
-import App from "../ScrollStarter/App";
+
 
 const Footer = () => {
   const ColorButton = styled(Button)(({ theme }) => ({
- 
-    textTransform:'lowercase',
-    
+    textTransform:'lowercase',  
     '&:hover': {
-     
     },
   }));
   
@@ -70,9 +66,6 @@ const samplePageLinks = [
   },
 ]
   
-  
-  
-
 const data=useMapQuery();
 console.log(data)
 
@@ -115,27 +108,24 @@ console.log(data)
       <LinksFooter>
       <h3>Información</h3>
       
-      
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
             {i !== samplePageLinks.length - 1 && <> <br/> </>}
           </React.Fragment>
         ))}
-
       
       </LinksFooter>
       <Adress>
         <h3>Donde</h3>
         <p>BDN LAB<br/>
-General Weyler, 128<br/>
-08912 Badalona<br/>Barcelona</p>
+        General Weyler, 128<br/>
+        08912 Badalona<br/>Barcelona</p>
       </Adress>
       <div>
       <a href="https://goo.gl/maps/FjeLdH2Z55aAiJiU6">
       <StyledImg image={imageData} alt="Localizacion en Badalona de Webadalona"/>
       </a>
- 
       </div>
       
     </FooterWrapper>
@@ -145,8 +135,6 @@ General Weyler, 128<br/>
     </>
   )  
 }
-
-
 
 export default Footer;
 

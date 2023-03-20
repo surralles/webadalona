@@ -1,17 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/Layout/Layout"
 import { Seo } from "../components/seo"
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "../components/index.module.css"
 import MailChimpForm from "../components/MailChimpForm/MailChimpForm"
-
-
-import { graphql } from "gatsby"
-
-
 
 const SecondPage = ({data}) => (
   <Layout>

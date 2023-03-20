@@ -21,11 +21,11 @@ const LogoScript = () =>{
          function growShrinkLogo() {
           var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-          if (size == 0 && scroll > endOfDocumentTop) {
+          if (size === 0 && scroll > endOfDocumentTop) {
             Logo.style.width = '60px';
             size = 1;
-          } else if(size == 1 && scroll <= endOfDocumentTop){
-            Logo.style.width = '120px';
+          } else if(size === 1 && scroll <= endOfDocumentTop){
+            Logo.style.width = '80px';
             size = 0;
             }
          }
@@ -41,7 +41,7 @@ const LogoScript = () =>{
                     src ={Logo}
                      alt= "logo"
                      css={css`
-                     width: 120px;
+                     width: 80px;
                      margin: 0;
                      padding: 120px 0 0 0;
         
