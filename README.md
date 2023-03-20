@@ -1,6 +1,6 @@
 <p align="center">
  
-    <img alt="Gatsby" src="../../images/designingecommerce_600.gif" width="60" />
+   
   
 </p>
 <h1 align="center">
