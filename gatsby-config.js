@@ -73,7 +73,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url:`http://webadalonaheadless.local/graphql`,
+        url:`https://demoswebadalona.es/graphql`,
       },
     },
     `gatsby-plugin-styled-components`,
