@@ -74,6 +74,9 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url:`https://demoswebadalona.es/graphql`,
+        schema: {
+          timeout: 90000,
+        },
       },
     },
     `gatsby-plugin-styled-components`,
