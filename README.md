@@ -1,12 +1,7 @@
 <p align="center">
-<<<<<<< HEAD
-
-
-=======
  
    
   
->>>>>>> a2d88e66207fe06fd49f838724630f97f875e74d
 </p>
 <h1 align="center">
  Webadalona site
