@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 import CloseButton from '../../images/close_btn.svg'
 import {Overlay} from './OverlayMenu.styles'
 import { graphql, useStaticQuery } from "gatsby";
@@ -75,7 +75,7 @@ const OverlayMenu =({ menuOpen, callback}) => {
         
             <Link  to="/">
             <StaticImage
-              src="../../images/designingecommerce_600.gif"
+              src="../../images/logowb.png"
               loading="eager"
                width={80}
                formats={["auto", "webp", "avif","svg"]}

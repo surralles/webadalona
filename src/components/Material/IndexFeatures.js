@@ -48,15 +48,13 @@ const IndexFeatures = () =>{
          <Item elevation ={4}>
          <Card >
          <StaticImage
-       src="../../images/ecommerce.png"
-       
-        loading="eager"
-        width={280}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-2)` }}
-      />
+            src="../../images/ecommerce.png"
+             loading="eager"
+            width={280}
+             formats={["auto", "webp", "avif"]}
+             alt="Agencia ecommerce"
+             style={{ marginBottom: `var(--space-2)` }}
+              />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
                 Qué Ecommerce elegir
@@ -83,11 +81,10 @@ const IndexFeatures = () =>{
                 src="../../images/shopify_why.png"
                 loading="eager"
                 width={120}
-                quality={95}
                 formats={["auto", "webp", "avif"]}
-                alt=""
+                alt="Ventajas Shopify"
                 style={{ marginBottom: `var(--space-2)` }}
-      />
+                 />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
                 Por qué Shopify
@@ -113,9 +110,8 @@ const IndexFeatures = () =>{
                 src="../../images/headless.png"
                 loading="eager"
                 width={180}
-                quality={95}
                 formats={["auto", "webp", "avif"]}
-                alt=""
+                alt="Desarrollo Headless"
                 style={{ marginBottom: `var(--space-2)` }}
       />
             <CardContent >
@@ -144,9 +140,8 @@ const IndexFeatures = () =>{
                 src="../../images/jamstack.png"
                 loading="eager"
                 width={220}
-                quality={95}
                 formats={["auto", "webp", "avif"]}
-                alt=""
+                alt="Desarrollo Jamstack"
                 style={{ marginBottom: `var(--space-2)` }}
       />
             <CardContent >
@@ -175,9 +170,8 @@ const IndexFeatures = () =>{
                 src="../../images/woocommerce.png"
                 loading="eager"
                 width={180}
-                quality={95}
                 formats={["auto", "webp", "avif"]}
-                alt=""
+                alt="características woocommerce"
                 style={{ marginBottom: `var(--space-2)` }}
       />
             <CardContent >
@@ -207,9 +201,8 @@ const IndexFeatures = () =>{
                 src="../../images/design.png"
                 loading="eager"
                 width={180}
-                quality={95}
                 formats={["auto", "webp", "avif"]}
-                alt=""
+                alt="Agencia diseño web"
                 style={{ marginBottom: `var(--space-2)` }}
       />
             <CardContent >

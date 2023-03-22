@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "../../images/designingecommerce_600.gif";
+
 import * as styles from "./styles.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { StaticImage } from "gatsby-plugin-image"
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -24,9 +25,15 @@ function App() {
     );
   }, []);
   return (
-    <div className={styles.App}>
-     
-      <img src={logo} className={styles.App-logo} alt="logo" ref={imgRef} />
+    <div className={styles.App} ref={imgRef}>
+     <StaticImage
+        src="../../images/logowb.png"
+        loading="eager"
+        width={110}   
+        formats={["auto", "webp", "avif","svg"]}
+        
+      />
+       
     </div>
   );
 }

@@ -40,12 +40,7 @@ export const Overlay = styled.div`
     color: #fff;
     padding: 40px;
    
-     
-    .invertedLogo {
-     
-      margin: 0 0 60px 0;
-      width:80px;
-    }
+ 
 
     .overlayMenu {
       text-align: left;
