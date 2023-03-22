@@ -76,8 +76,6 @@ console.log(data)
   <ThemeProvider theme={whiteButton}>
  
   <Wrapper>
-  
-    <FixedWrapper>
     <FooterWrapper>
     
       <FirstColumn>
@@ -125,7 +123,6 @@ console.log(data)
       </div>
       
     </FooterWrapper>
-    </FixedWrapper>
     </Wrapper>
     </ThemeProvider>
     </>
