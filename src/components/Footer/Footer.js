@@ -77,14 +77,13 @@ console.log(data)
  
   <Wrapper>
   
-    <FixedWrapper>
     <FooterWrapper>
     
       <FirstColumn>
       <h1>Hablamos,</h1> 
-      <h5>Establecido en Badalona después de 15 años<br/>
-       de experiencia en el sector para dar servicio a <br/>
-       profesionales, pequeñas y medianas empresas. </h5>
+      <p>Establecido en Badalona después de 15 años
+       de experiencia dando servicio a profesionales, 
+       pequeñas y medianas empresas. </p>
     
       <p>Cuéntame sobre tu proyecto o tus dudas<br/>y configuramos un plan viable.</p>
        <p><a href="mailto:jordi@webadalona.es">
@@ -129,7 +128,7 @@ console.log(data)
       </div>
       
     </FooterWrapper>
-    </FixedWrapper>
+    
     </Wrapper>
     </ThemeProvider>
     </>

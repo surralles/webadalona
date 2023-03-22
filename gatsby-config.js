@@ -74,23 +74,28 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url:`http://webadalonaheadless.local/graphql`,
+        schema: {
+          timeout: 90000,
+        },
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-material-ui`,
-
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [
           `limelight`,
-          `source sans pro\:300,400,400i,700`,
           `Frank Ruhl Libre\:400,700 `,
-          `Roboto\:400,700`,
-          `Poppins\:200,400,500`// you can also specify font weights and styles
+          `Poppins\:200,400,500` // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: "swap",
+        attributes: {
+          rel: "stylesheet preload prefetch",
+        },
+      },
     },
+
+
   ],
 }

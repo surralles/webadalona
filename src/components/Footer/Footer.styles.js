@@ -20,13 +20,7 @@ position: sticky;
   text-align:left;
 `;
 
-export const FixedWrapper = styled.div`
-padding-top: 100px ;
-height:100%;
 
-
-
-`
 export const FooterWrapper = styled.div`
 
 height:100%;
@@ -35,6 +29,9 @@ height:100%;
  }
   display: flex;
   gap:20px;
+  max-width:1300px;
+  margin:0 auto;
+  padding: 30px 0 0 10px;
   justify-content:center;
   color: #fff;
   text-align:left;
@@ -57,11 +54,11 @@ height:100%;
 
 export const FirstColumn = styled.div`
 margin-right:50px;
-h5{
-  line-height:1.3em;
+p{
+  line-height:1.1em;
   margin-bottom:15px;
-  font-size:1em;
-  text-transform: lowercase;
+  font-size:.9em;
+
   color:#fff
 }
 `
@@ -72,8 +69,8 @@ h3{
   margin-bottom:10px
 }
 p{
-  font-size:1em;
-  line-height:1em;
+  font-size:.9em;
+  line-height:1.1em;
 }
 `
 

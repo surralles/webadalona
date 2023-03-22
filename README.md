@@ -1,7 +1,6 @@
 <p align="center">
- 
-    <img alt="Gatsby" src="./src/images/designingecommerce_600.gif" width="60" />
-  
+
+
 </p>
 <h1 align="center">
  Webadalona site
