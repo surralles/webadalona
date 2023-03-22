@@ -51,8 +51,9 @@ export const SlideWrapper = styled.div`
   justify-content: flex-start;
   align-content:flex-start;
   height: 100%;
-  width: 100%;
-  padding:10px;
+  width: 80%;
+ 
+  
 
   h1 {
     color: #fff;
@@ -60,6 +61,10 @@ export const SlideWrapper = styled.div`
     text-align: left;
     line-height:1.5em;
     max-width:650px;
+    font-size:2rem ;
+    font-weight:700;
+   
+  
 
     @media screen and (min-width: 768px) {
       font-size: 2.7rem;
