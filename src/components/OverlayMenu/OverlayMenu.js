@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Logo from '../../images/designingecommerce_600.gif';
+import { StaticImage } from "gatsby-plugin-image"
 import CloseButton from '../../images/close_btn.svg'
 import {Overlay} from './OverlayMenu.styles'
 import { graphql, useStaticQuery } from "gatsby";
@@ -74,7 +74,14 @@ const OverlayMenu =({ menuOpen, callback}) => {
          <div className ="inner">
         
             <Link  to="/">
-                    <img className ="invertedLogo"  src ={Logo} width="" alt= "webadalona logo" />
+            <StaticImage
+              src="../../images/designingecommerce_600.gif"
+              loading="eager"
+               width={80}
+               formats={["auto", "webp", "avif","svg"]}
+              alt="Logo Webadalona"
+              style={{ marginBottom: `var(--space-6)` }}
+              />   
                 </Link>
             <ul className="overlayMenu">
                 {data.wpMenu.menuItems.nodes.map(item =>(

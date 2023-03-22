@@ -42,6 +42,7 @@ const LogoScript = () =>{
                      alt= "logo"
                      css={css`
                      width: 80px;
+                     height:auto;
                      margin: 0;
                      padding: 120px 0 0 0;
         
