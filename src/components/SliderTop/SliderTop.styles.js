@@ -60,7 +60,6 @@ export const SlideWrapper = styled.div`
     text-align: left;
     line-height:1.5em;
     max-width:650px;
-    font-size:1.5rem;
 
     @media screen and (min-width: 768px) {
       font-size: 2.7rem;

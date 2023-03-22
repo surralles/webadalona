@@ -81,9 +81,7 @@ console.log(data)
     
       <FirstColumn>
       <h1>Hablamos,</h1> 
-      <p>Establecido en Badalona después de 15 años
-       de experiencia dando servicio a profesionales, 
-       pequeñas y medianas empresas. </p>
+      
     
       <p>Cuéntame sobre tu proyecto o tus dudas<br/>y configuramos un plan viable.</p>
        <p><a href="mailto:jordi@webadalona.es">
@@ -128,7 +126,7 @@ console.log(data)
       </div>
       
     </FooterWrapper>
-    
+   
     </Wrapper>
     </ThemeProvider>
     </>
