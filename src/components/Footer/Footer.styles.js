@@ -20,11 +20,6 @@ position: sticky;
   text-align:left;
 `;
 
-<<<<<<< HEAD
-
-=======
-`
->>>>>>> a2d88e66207fe06fd49f838724630f97f875e74d
 export const FooterWrapper = styled.div`
 
 height:100%;
@@ -34,11 +29,8 @@ height:100%;
   display: flex;
   gap:20px;
   max-width:1300px;
-<<<<<<< HEAD
   margin:0 auto;
   padding: 30px 0 0 10px;
-=======
->>>>>>> a2d88e66207fe06fd49f838724630f97f875e74d
   justify-content:center;
   color: #fff;
   text-align:left;
@@ -65,10 +57,6 @@ p{
   line-height:1.1em;
   margin-bottom:15px;
   font-size:.9em;
-<<<<<<< HEAD
-
-=======
->>>>>>> a2d88e66207fe06fd49f838724630f97f875e74d
   color:#fff
 }
 `
