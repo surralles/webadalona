@@ -6,7 +6,7 @@ import Client from "shopify-buy"
 const client = Client.buildClient(
   {
     domain: process.env.GATSBY_SHOPIFY_STORE_URL,
-    storefrontAccessToken: process.env.GATSBY_STOREFRONT_ACCES_TOKEN,
+    storefrontAccessToken: process.env.SHOPIFY_SHOP_PASSWORD,
   },
   fetch
 )
