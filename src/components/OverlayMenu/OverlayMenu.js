@@ -23,6 +23,7 @@ const samplePageLinks = [
     description:
       "Demo tienda online de web con arquitectura componible",
   },
+  
  
 ]
 
@@ -66,6 +67,7 @@ const OverlayMenu =({ menuOpen, callback}) => {
      `
    )
 
+ 
 
     return (
       <ThemeProvider theme={theme}>
@@ -104,6 +106,9 @@ const OverlayMenu =({ menuOpen, callback}) => {
                 {i !== samplePageLinks.length - 1 && <> <br/> </>}
               </React.Fragment>
             ))}
+          </li>
+          <li className="contacto">Contacto 
+          <a href="mailto:jordi@webadalona.es"> jordi@webadalona.es</a>
           </li>
           
             </ul>

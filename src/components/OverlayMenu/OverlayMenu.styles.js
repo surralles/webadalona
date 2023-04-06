@@ -128,7 +128,12 @@ export const Overlay = styled.div`
     .inner-contact{
       display:none;
     }
+    
+  }
+  @media (min-width: 800px)
+  .contacto{
+    display:none
   }
 
-
 `;
+
