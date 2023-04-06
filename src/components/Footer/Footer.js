@@ -1,5 +1,5 @@
 import React from "react";
-import {FooterWrapper,Wrapper,FixedWrapper,LinksFooter,FirstColumn,StyledImg,Adress} from './Footer.styles';
+import {FooterWrapper,Wrapper,LinksFooter,FirstColumn,StyledImg,Adress} from './Footer.styles';
 import MailIcon from '@mui/icons-material/Mail';
 import Button from "@mui/material/Button";
 import { Link } from "gatsby"

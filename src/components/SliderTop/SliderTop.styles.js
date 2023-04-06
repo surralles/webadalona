@@ -3,12 +3,14 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 
 export const StyledSlider = styled.div`
-  .slick-dots {
+
+.slick-dots {
     
-   left:90%;
-   bottom:50%;
+   left:85%;
+  top:60%;
    max-width:fit-content;
    overflow:hidden;
+   margin-right:10px;
    
   }
   .slick-dots li{
@@ -38,20 +40,30 @@ export const WrapperSlider = styled.div`
 `
 
 export const StyledImg = styled(GatsbyImage)`
-min-height: 900px;
+
+height: 75vh;
+
 margin-bottom: 30px;
+
+@media screen and (min-width: 768px) {
+  min-height: 85vh;
+}
+
+
 `;
 
 export const SlideWrapper = styled.div`
   position: absolute;
-  top: 25%;
-  left: 10%;
+  top: 60%;
+  left: 0%;
   display: flex;
   align-items: top;
   justify-content: flex-start;
   align-content:flex-start;
-  height: 100%;
+  height:100%;
   width: 80%;
+  border-radius: 20px;
+ 
  
   
 
@@ -61,13 +73,18 @@ export const SlideWrapper = styled.div`
     text-align: left;
     line-height:1.5em;
     max-width:650px;
-    font-size:2rem ;
+    font-size:1.7rem ;
     font-weight:700;
+    background: rgba(255, 255, 255, .7) ;
+    padding:10px;
+    
+   
+    
    
   
 
     @media screen and (min-width: 768px) {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       font-weight:700;
     }
   }

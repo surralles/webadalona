@@ -273,7 +273,7 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 1px;
     color: #282828;
     text-transform: uppercase;
-    line-height: 40px;
+    line-height: 1.4rem;
     margin-top: 10px;
   }
   h2 {

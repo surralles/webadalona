@@ -10,7 +10,7 @@ export const SlideQuery = () =>{
       slidertop1Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
@@ -18,7 +18,7 @@ export const SlideQuery = () =>{
       slidertop2Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
@@ -26,7 +26,7 @@ export const SlideQuery = () =>{
       slidertop3Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
@@ -34,7 +34,7 @@ export const SlideQuery = () =>{
       slidertop4Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
@@ -42,7 +42,7 @@ export const SlideQuery = () =>{
       slidertop5Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
@@ -50,7 +50,7 @@ export const SlideQuery = () =>{
       slidertop6Image {
         localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
       }
