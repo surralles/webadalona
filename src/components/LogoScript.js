@@ -1,6 +1,6 @@
 import React from 'react';
 import {useEffect} from "react";
-import Logo from '../images/designingecommerce_600.gif';
+import Logo from '../images/designingecommerce.png';
 import { Link } from 'gatsby';
 import { css } from "@emotion/react"
 
