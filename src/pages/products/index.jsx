@@ -23,7 +23,7 @@ export default function Products({ data: { products } }) {
   )
 }
 
-export const Head = () => <Seo title="Todos los productos de Webadalona" />
+export const Head = () => <Seo titulo="Demo Tienda Online Gatsby & Shopify" />
 
 export const query = graphql`
   {

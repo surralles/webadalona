@@ -12,7 +12,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Webadalona`,
-    description: `Desarrollo y diseño web en Badalona`,
+    description: `Tu agencia de páginas web y tiendas online en Badalona (Barcelona). Posicionamiento SEO y SEM. Alto rendimiento para diferentes tamaños de neogio.`,
     author: `@webadalona`,
     siteUrl: `https://webadalona.es/`,
   },

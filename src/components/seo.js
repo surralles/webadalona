@@ -27,35 +27,32 @@ export function Seo({
     }
   `)
 
-  const {
-    title,
-    siteUrl,
-    description,
- 
-  } = siteMetadata
+
+const {
+  title,
+  
+  siteUrl,
+  description,
+  siteImage,
+  twitter,
+} = siteMetadata
 
   const seo = {
-    title: titulo  ,
-    metaDescription: descripcion || description ,
+    title: titulo || title ,
+    description:  descripcion || description,
     url: pathname ? `${siteUrl}${pathname}` : location.href,
     
     
   }
 
-  const metaDescription = descripcion || description
-  const defaultTitle = title || titulo
-
-
-
-
   return (
     <>
-        <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={seo.metaDescription} />
+        <title>{title ? `${titulo} | ${title}` : `Webadalona`}</title>
+      <meta name="description" content={seo.description} />
     
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
-      <meta property="og:description" content={seo.metaDescription} />
+      <meta property="og:description" content={seo.description} />
      
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />

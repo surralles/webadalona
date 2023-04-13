@@ -136,7 +136,7 @@ Ejemplo de guía y marketing implementado
 }
 
 
-export const Head = () => <Seo title="" />
+export const Head = () => <Seo titulo="Desarrollo y diseño web en Badalona" />
 
 export default IndexPage
 
