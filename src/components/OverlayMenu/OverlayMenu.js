@@ -86,6 +86,8 @@ const OverlayMenu =({ menuOpen, callback}) => {
               />   
                 </Link>
             <ul className="overlayMenu">
+            <li className="contacto">SERVICIOS 
+          </li>
                 {data.wpMenu.menuItems.nodes.map(item =>(
                     !item.parentId  ? (
                         <li key={item.id}>
@@ -107,6 +109,11 @@ const OverlayMenu =({ menuOpen, callback}) => {
               </React.Fragment>
             ))}
           </li>
+          <li>
+           <Link to="https://webadalona.es/blog/seo" activeClassName="overlayActive">
+            SEO/SEM
+           </Link>
+           </li>
           <li className="contacto">Contacto 
           <a href="mailto:jordi@webadalona.es"> jordi@webadalona.es</a>
           </li>
@@ -128,12 +135,13 @@ const OverlayMenu =({ menuOpen, callback}) => {
             <div className ="inner-contact">
             <FirstColumn>
       <h1 syles={css`
-      font-size:2em !important`
-      }>Hablamos,</h1> 
-      
-      <p styles={css`
+      font-size:2em !important;
       margin-bottom="30px"
-      `}>Cuéntame sobre tu proyecto o tus dudas<br/>y configuramos un plan viable.</p>
+      `
+      }>Hablamos,<br/>
+      Cuéntame sobre tu proyecto o tus dudas<br/>
+      y configuramos un plan viable.</h1> 
+      
        <p><a href="mailto:jordi@webadalona.es">
         <ColorButton variant="outlined" startIcon={<MailIcon/>} size="small">jordi@webadalona.es</ColorButton>
         </a>

@@ -67,8 +67,8 @@ import Alert from '@mui/material/Alert';
        <div className={styles.firstDiv}>
         <h1>El mejor servicio de diseño web y desarrollo ecommerce en Badalona</h1>
         <h2 ref={(el)=>{text=el}}>Los clientes y motores de búsqueda quieren <b>sitios web rápidos</b></h2>
-        <p>Te ofrecemos una ventaja sobre tus competidores con la última tecnología de arquitectura web 'Headless' en un entorno desacoplado para construir tiendas online modernas veloces y SEO friendly que faciliten las conversiones. 
-        <br/><br/>Pero siempre te aconsejo de manera transparente<b> cual es tu mejor opción</b>. Captamos tu situación e historia mejorando la imagen de marca de manera coherente con el negocio y las estrategias de marketing. Trabajamos con:
+        <p>Optimizamos el rendimiento de nuestros desarrollos en WordPress pero además te ofrecemos una ventaja sobre tus competidores con la última tecnología de arquitectura en aplicaciones web. Construimos entornos desacoplados para servir tiendas online veloces y SEO friendly que faciliten las conversiones. 
+        <br/><br/>Pero siempre te aconsejo de manera transparente<b> cual es tu mejor opción</b>. Captamos tu situación e historia mejorando la imagen de marca de manera coherente con el negocio y las estrategias de marketing.<br/><br/>Trabajamos con:
         </p>
       </div>
 

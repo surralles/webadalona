@@ -57,7 +57,7 @@ export const Overlay = styled.div`
 
       a {
         font-family: 'Frank Ruhl Libre', Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #fff;
         transition: all 0.3s ease;
         text-decoration: none;
@@ -129,6 +129,10 @@ export const Overlay = styled.div`
       display:none;
     }
     
+  }
+  .contacto{
+    margin-top: 15px;
+    margin-bottom:15px;
   }
   @media (min-width: 800px)
   .contacto{
