@@ -57,7 +57,7 @@ const IndexFeatures = () =>{
               />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                Qué Ecommerce elegir
+                 Diferentes soluciones Ecommerce
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                 Especializados en comercio electrónico. Adaptamos sistemas de Ecommerce a la vanguardia de la innovación
@@ -87,7 +87,7 @@ const IndexFeatures = () =>{
                  />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                Por qué Shopify
+                 Tiendas ultraveloces con Shopify y Gatsby
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                 Shopify es una plataforma de comercio electrónico de nivel empresarial
@@ -116,7 +116,7 @@ const IndexFeatures = () =>{
       />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                Qué es el desarrollo 'Headless'
+                 Desarrollo Headless WordPress y Shopify
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                  El desarrollo 'Headless' significa desacoplar el backend (la parte administrativa del sitio web) 
@@ -146,7 +146,7 @@ const IndexFeatures = () =>{
       />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                 Por qué usar Jamstack para su sitio de comercio electrónico
+                 Ventajas de la arquitectura web componible o Jamstack
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                  El primer paso para comenzar a llegar a nuevos clientes o ganar visibilidad para
@@ -176,7 +176,7 @@ const IndexFeatures = () =>{
       />
             <CardContent >
                  <Typography gutterBottom fontWeight={500} align="left" variant="h5" component="div">
-                 Características clave de WooCommerce
+                 Diseño a medida con WordPress y WooCommerce
                 </Typography>
                  <Typography align="left" variant="body2" color="text.secondary">
                  WooCommerce es una plataforma de comercio electrónico de código abierto asociada a sitios web 
