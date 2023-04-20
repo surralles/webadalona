@@ -45,7 +45,7 @@ export function Header() {
       <header className={header}>
         
         <Navigation className={nav} />
-        <Link to="/account" className={accountButton}>
+        <Link to="/account/login" className={accountButton}>
         <ColorButton variant="outlined" startIcon={<PermIdentityIcon />} size="small">Acceder</ColorButton>
         </Link>
 
