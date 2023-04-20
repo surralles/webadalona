@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import CloseButton from '../../images/close_btn.svg'
 import {Overlay} from './OverlayMenu.styles'

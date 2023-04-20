@@ -1,0 +1,70 @@
+.miCuenta {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.loginContainer {
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    min-height: 100vh;
+    
+ 
+    }
+
+.accountContainer {
+        display: flex;
+        flex-wrap:wrap; 
+        justify-content: space-between;
+        gap:30px;
+    
+        margin-top:50px;
+     
+        }
+
+.loginMain h2{
+    font-size: 2rem;
+    text-align: center;
+    
+
+}
+.fieldForm{
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+}
+
+
+.fieldForm label{
+    display:none
+}
+
+.fieldForm input{
+    padding:.6rem;
+    border-color: #de3e66;
+    border-radius: 2px;
+    border-width:2px;
+    min-width:100%;
+}
+
+
+.updateForm{
+    margin-top:5px;
+  text-decoration: underline;
+ 
+}
+
+.buttonForm{
+    background-color: #de3e66;
+    padding:10px;
+    color:#fff;
+    margin-top:20px;
+}
+
+.crearCuenta{
+    margin-top:5px;
+    text-decoration: underline;
+}
+

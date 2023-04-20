@@ -1,0 +1,16 @@
+.noEncontrado{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    max-width: 800px;
+    justify-content: flex-end;
+    align-items: center;
+    gap:30px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container{
+    max-width: 800px;
+    margin:0 auto;
+}

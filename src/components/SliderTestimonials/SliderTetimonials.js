@@ -50,12 +50,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_1.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)` , float:`left`}}
       />
             <CardContent >
@@ -77,12 +74,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_2.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >
@@ -104,12 +98,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_3.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >
@@ -132,12 +123,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_4.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+       height={86}
+       alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >
@@ -158,12 +146,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_5.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >
@@ -185,12 +170,9 @@ return(
     sx={{marginRight:'60px'}}>
          <StaticImage
        src="../../images/testimonio_6.jpg"
-       
-        loading="eager"
-        width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+       width={86}
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >
@@ -211,13 +193,10 @@ return(
     <Card variant="outlined"
     sx={{marginRight:'60px'}}>
          <StaticImage
-       src="../../images/testimonio_7.jpg"
-       
-        loading="eager"
+       src="../../images/testimonio_7.jpg"  
         width={86}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
+        height={86}
+        alt="Testimonio diseño wed para Webadalona"
         style={{ marginBottom: `var(--space-2)`, float:`left`}}
       />
             <CardContent >

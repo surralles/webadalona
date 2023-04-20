@@ -9,12 +9,27 @@ import {  useContext } from "react";
 import {
   header,
   container,
-  
+  accountButton,
   searchButton,
   nav,
 } from "./header.module.css"
 
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import { ThemeProvider } from '@mui/material/styles';
+import {theme } from './Material/MaterialTheme'
+import Button from "@mui/material/Button";
+import { styled } from '@mui/material/styles';
+
 export function Header() {
+
+  const ColorButton = styled(Button)(({ theme }) => ({
+    color:'#de3e66',
+    
+    '&:hover': {
+     
+    },
+  }));
+
   
   const { checkout, loading, didJustAddToCart } = useContext(StoreContext)
 
@@ -25,14 +40,20 @@ export function Header() {
   }, 0)
   
   return (
+    <ThemeProvider theme={theme}>
     <div className={container}>
       <header className={header}>
-       
+        
         <Navigation className={nav} />
+        <Link to="/account" className={accountButton}>
+        <ColorButton variant="outlined" startIcon={<PermIdentityIcon />} size="small">Acceder</ColorButton>
+        </Link>
+
         <Link to="/search" className={searchButton}>
           <SearchIcon />
         </Link>
         <CartButton quantity={quantity} />
+        
        
         
       </header>
@@ -41,7 +62,7 @@ export function Header() {
           "Updating…"
         ) : (
           <>
-            Added to cart{" "}
+            Añadido al carrito{" "}
             <svg
               width="14"
               height="14"
@@ -66,5 +87,6 @@ export function Header() {
       </Toast>
      
     </div>
+    </ThemeProvider>
   )
 }

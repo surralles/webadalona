@@ -13,8 +13,8 @@
     display: grid;
     width: 100%;
     padding: var(--size-gap) var(--size-gutter);
-    grid-template-columns: var(--size-input) 1fr min-content min-content;
-    grid-template-areas: "logo nada searchButton cartButton" "navHeader navHeader navHeader navHeader";
+    grid-template-columns: var(--size-input) 1fr auto max-content min-content;
+    grid-template-areas: "logo nada accountButton searchButton cartButton" " navHeader navHeader navHeader navHeader navHeader";
     align-items: center;
     background-color: var(--background);
   }
@@ -36,7 +36,7 @@
   
   @media (min-width: 640px) {
     .header {
-      grid-template-areas: "logo navHeader searchButton cartButton";
+      grid-template-areas: "logo navHeader accountButton  searchButton cartButton";
     }
   }
   
@@ -68,6 +68,15 @@
     color: var(--text-color-secondary);
     grid-area: searchButton;
     width: var(--size-input);
+    height: var(--size-input);
+    display: grid;
+    place-items: center;
+  }
+
+  .accountButton {
+    color: var(--text-color-secondary);
+    grid-area: accountButton;
+    width: 100%;
     height: var(--size-input);
     display: grid;
     place-items: center;

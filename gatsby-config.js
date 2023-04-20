@@ -18,7 +18,17 @@ module.exports = {
   },
   plugins: [
 
-    
+    {
+      resolve: `gatsby-plugin-apollo-shopify`,
+      options: {
+        shopName: `webadalona-ecommerce`,
+        accessToken: `9817ccaacab74cd2aac18ed27a10591f`,
+        // Optionally set the API version you want to use. For a list of available API versions,
+        // see: https://shopify.dev/concepts/about-apis/versioning/release-notes
+        // Defaults to unspecified/oldest stable
+        
+      },
+    },
 
     {
       resolve: "gatsby-source-shopify",
