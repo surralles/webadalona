@@ -6,6 +6,7 @@ import { Seo } from "../../../components/seo"
 import slugify from "@sindresorhus/slugify"
 import { MoreButton } from "../../../components/more-button"
 import { title } from "../index.module.css"
+import Layout from "../../../components/Layout/Layout"
 
 
 export default function ProductTypeIndex({
@@ -13,6 +14,7 @@ export default function ProductTypeIndex({
   pageContext: { productType },
 }) {
   return (
+    <Layout>
     <LayoutShop>
       <h1 className={title}>{productType}</h1>
       <ProductListing products={products.nodes} />
@@ -22,6 +24,7 @@ export default function ProductTypeIndex({
         </MoreButton>
       )}
     </LayoutShop>
+    </Layout>
   )
 }
 
