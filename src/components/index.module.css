@@ -1,6 +1,3 @@
-
-
-
 .list {
   display: grid;
   margin: 0;
@@ -47,54 +44,43 @@
   margin-top: var(--space-1);
 }
 
-
-
 .intro {
   max-width: none;
   line-height: var(--line-height-loose);
- 
 }
 
-.firstDiv{
+.firstDiv {
   max-width: 900px;
   margin: 0 auto;
-  
-
-  
 }
-.firstDiv h1{
-  color: #3C4856C2;
-    font-family: 'Poppins';
-    font-weight: 400;
-    text-align: center;
-    
-    
+.firstDiv h1 {
+  color: #3c4856c2;
+  font-family: "Poppins";
+  font-weight: 400;
+  text-align: center;
 }
-.firstDiv h2{
+.firstDiv h2 {
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 1.5rem;
   text-align: center;
-  ;
 }
 
-.firstDiv p{
+.firstDiv p {
   text-align: center;
-
 }
 
-.secondDiv{
- 
-  text-align:left;
+.secondDiv {
+  text-align: left;
 }
 
-.serviceStyle{
-  max-width:1200px;
+.serviceStyle {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.serviceStyle h1{
-  font-size:2rem;
-  font-weight:700;
+.serviceStyle h1 {
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 2.5rem;
 }

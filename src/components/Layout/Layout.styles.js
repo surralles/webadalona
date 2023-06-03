@@ -1,14 +1,13 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components"
 
 export const Primary = styled.main`
   padding: 0px 0 0 0;
-  background:#fff;
+  background: #fff;
   position: relative;
   z-index: 1;
-`;
+`
 
 export const GlobalStyles = createGlobalStyle`
-{
   :root{
     --space-1: 4px;
     --space-2: 8px;
@@ -634,4 +633,4 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 }
-`;
+`

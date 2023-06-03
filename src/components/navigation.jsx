@@ -24,7 +24,7 @@ export function Navigation({ className }) {
       >
         Todo
       </Link>
-      {productTypes.map((name) => (
+      {productTypes.map(name => (
         <Link
           key={name}
           className={navLink}

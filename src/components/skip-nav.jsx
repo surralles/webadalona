@@ -12,9 +12,9 @@ export function SkipNavLink({
 
   return (
     <div>
-    <a className={navLink} {...props} href={`#${id}`} data-skip-to-content>
-      {children}
-    </a>
+      <a className={navLink} {...props} href={`#${id}`} data-skip-to-content>
+        {children}
+      </a>
     </div>
   )
 }

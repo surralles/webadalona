@@ -1,45 +1,33 @@
-import React from "react";
-import {Link } from 'gatsby-plugin-react-i18next';
-import  { Wrapper } from './Navigation.styles';
+import React from "react"
+import { Link } from "gatsby-plugin-react-i18next"
+import { Wrapper } from "./Navigation.styles"
 
-
-
-const Navigation =({ menu }) => (
-
-<Wrapper>
+const Navigation = ({ menu }) => (
+  <Wrapper>
     <ul>
-        {menu.map(mainItem =>
+      {menu.map(mainItem =>
         !mainItem.parentId ? (
-            <li key={mainItem.id}>
-                <Link to={mainItem.url} activeClassName="nav-active" >
-                {mainItem.label}
-                {mainItem.childItems.nodes.length !==0 && <div>&#10550;</div>}
-
-                </Link>
-                {mainItem.childItems.nodes.length !==0 ? (
-                    <ul>
-                         {mainItem.childItems.nodes.map(childItem=>(
-                            <li key={childItem.id}>
-                               <Link to={childItem.url} activeClassName="nav-active" >
-                                {childItem.label}
-                                </Link> 
-                            </li>
-
-                         )
-                            )}
-                    </ul>
-
-                ) :null }
-            </li>
-            
-
-        ):null
-            )}
-
-          
+          <li key={mainItem.id}>
+            <Link to={mainItem.url} activeClassName="nav-active">
+              {mainItem.label}
+              {mainItem.childItems.nodes.length !== 0 && <div>&#10550;</div>}
+            </Link>
+            {mainItem.childItems.nodes.length !== 0 ? (
+              <ul>
+                {mainItem.childItems.nodes.map(childItem => (
+                  <li key={childItem.id}>
+                    <Link to={childItem.url} activeClassName="nav-active">
+                      {childItem.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        ) : null
+      )}
     </ul>
-</Wrapper>
-
+  </Wrapper>
 )
 
 export default Navigation
