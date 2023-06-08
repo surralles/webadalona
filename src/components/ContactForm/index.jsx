@@ -3,6 +3,13 @@ import React from "react"
 // axios
 import axios from "axios"
 
+// components
+import LoaderComponent from "../LoaderComponent"
+
+// React Toastify
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 // Styles
 import {
   ContactFormForm,
@@ -34,15 +41,15 @@ const ContactForm = () => {
     setFormStatus("pending")
 
     const contactForm = new FormData()
-    contactForm.append("first_name", formData.first_name)
-    contactForm.append("last_name", formData.last_name)
+    contactForm.append("first-name", formData.first_name)
+    contactForm.append("last-name", formData.last_name)
     contactForm.append("email", formData.email)
-    contactForm.append("phone", formData.phone)
+    contactForm.append("phone-number", formData.phone)
     contactForm.append("message", formData.message)
 
     try {
       const response = await axios.post(
-        "https://demoswebadalona.es//wp-json/contact-form-7/v1/contact-forms/4902/feedback",
+        "https://demoswebadalona.es/wp-json/contact-form-7/v1/contact-forms/4902/feedback",
         contactForm,
         {
           headers: {
@@ -52,31 +59,48 @@ const ContactForm = () => {
         }
       )
 
-      console.log("respomns", response)
-
       if (response.status === 200) {
         setFormStatus("success")
+        toast.success(
+          "Message sent successfully! We will get back to you soon.",
+          {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            theme: "light",
+          }
+        )
+
+        setFormData({
+          first_name: "",
+          last_name: "",
+          email: "",
+          phone: "",
+          message: "",
+        })
+
+        setTimeout(() => {
+          setFormStatus("idle")
+        }, 5000)
       }
     } catch (error) {
-      console.log("error", error)
       setFormStatus("error")
+
+      toast.error("Something went wrong! Please try again.", {
+        position: "top-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        theme: "light",
+      })
     }
-
-    // setFormData({
-    //   first_name: "",
-    //   last_name: "",
-    //   email: "",
-    //   phone: "",
-    //   message: "",
-    // })
-
-    // setTimeout(() => {
-    //   setFormStatus("idle")
-    // }, 5000)
   }
 
   return (
     <ContactFormStyled>
+      {formStatus === "success" ||
+        (formStatus === "error" && <ToastContainer />)}
       <ContactFormWrapper>
         <ContactFormTitle>Contact Form</ContactFormTitle>
 
@@ -90,6 +114,7 @@ const ContactForm = () => {
                   id="first_name"
                   name="first_name"
                   value={formData.first_name}
+                  required
                   onChange={handleChange}
                 />
               </div>
@@ -100,6 +125,7 @@ const ContactForm = () => {
                   type="text"
                   id="last_name"
                   name="last_name"
+                  required
                   value={formData.last_name}
                   onChange={handleChange}
                 />
@@ -113,6 +139,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -124,6 +151,7 @@ const ContactForm = () => {
                   id="phone"
                   name="phone"
                   value={formData.phone}
+                  required
                   onChange={handleChange}
                 />
               </div>
@@ -139,7 +167,17 @@ const ContactForm = () => {
               onChange={handleChange}
             ></textarea>
 
-            <ContactFormFormButton type="submit">Submit</ContactFormFormButton>
+            <ContactFormFormButton
+              type="submit"
+              disabled={formStatus === "pending"}
+            >
+              <span>Submit</span>
+              {formStatus === "pending" && (
+                <i>
+                  <LoaderComponent size={26} color={"#ffffff"} />
+                </i>
+              )}
+            </ContactFormFormButton>
           </ContactFormFormGroup>
         </ContactFormForm>
       </ContactFormWrapper>

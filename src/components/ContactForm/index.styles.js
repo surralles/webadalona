@@ -96,12 +96,23 @@ export const ContactFormFormButton = styled.button`
   font-size: 1rem;
   letter-spacing: 1px;
   margin-top: 1rem;
-  transition: all 300s ease-in-out !important;
+  transition: all 300ms ease-in-out !important;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
   &:hover {
-    transition: all 300s ease-in-out !important;
+    transition: all 300ms ease-in-out !important;
+    box-shadow: 0 5px 15px rgba(252, 92, 125, 0.4) !important;
     background: linear-gradient(to right, #8f329a, #fc5c7d);
+    transform: translateY(-1px);
   }
 `
 
