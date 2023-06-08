@@ -99,8 +99,9 @@ const ContactForm = () => {
 
   return (
     <ContactFormStyled>
-      {formStatus === "success" ||
-        (formStatus === "error" && <ToastContainer />)}
+      {(formStatus === "success" || formStatus === "error") && (
+        <ToastContainer />
+      )}
       <ContactFormWrapper>
         <ContactFormTitle>Contact Form</ContactFormTitle>
 
