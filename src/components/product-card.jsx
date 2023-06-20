@@ -44,32 +44,31 @@ export function ProductCard({ product, eager }) {
     }
   }
 
-  const hasImage = firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
+  const hasImage =
+    firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
 
   return (
-    
     <Link
       className={productCardStyle}
       to={slug}
       aria-label={`View ${title} product page`}
     >
-      {hasImage
-        ? (
-          <div className={productImageStyle} data-name="product-image-box">
-            <GatsbyImage
-              alt={firstImage?.altText ?? title}
-              image={firstImage?.preview.image.gatsbyImageData ?? storefrontImageData}
-              loading={eager ? "eager" : "lazy"}
-            />
-            
-          </div>
-        ) : (
-          <div style={{ height: defaultImageHeight, width: defaultImageWidth }} />
-        )
-      }
+      {hasImage ? (
+        <div className={productImageStyle} data-name="product-image-box">
+          <GatsbyImage
+            alt={firstImage?.altText ?? title}
+            image={
+              firstImage?.preview.image.gatsbyImageData ?? storefrontImageData
+            }
+            loading={eager ? "eager" : "lazy"}
+          />
+        </div>
+      ) : (
+        <div style={{ height: defaultImageHeight, width: defaultImageWidth }} />
+      )}
       <div className={productDetailsStyle}>
         <div className={productVendorStyle}>{vendor}</div>
-       
+
         <h2 as="h2" className={productHeadingStyle}>
           {title}
         </h2>

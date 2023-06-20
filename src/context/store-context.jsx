@@ -1,12 +1,12 @@
 import * as React from "react"
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect } from "react"
 import fetch from "isomorphic-fetch"
 import Client from "shopify-buy"
 
 const client = Client.buildClient(
   {
     domain: process.env.GATSBY_SHOPIFY_STORE_URL,
-    storefrontAccessToken:'9817ccaacab74cd2aac18ed27a10591f',
+    storefrontAccessToken: "9817ccaacab74cd2aac18ed27a10591f",
   },
   fetch
 )
@@ -24,13 +24,13 @@ const defaultValues = {
   checkout: {
     lineItems: [],
   },
-  setValue: () => { },
+  setValue: () => {},
 }
 
 export const StoreContext = createContext(defaultValues)
 
 const isBrowser = typeof window !== `undefined`
-const localStorageKey = `shopify_checkout_id`;
+const localStorageKey = `shopify_checkout_id`
 
 export const StoreProvider = ({ children }) => {
   const [checkout, setCheckout] = useState(defaultValues.checkout)
@@ -38,15 +38,15 @@ export const StoreProvider = ({ children }) => {
   const [didJustAddToCart, setDidJustAddToCart] = useState(false)
   const [store, updateStore] = useState(defaultValues)
 
-  const getlocalStorage = (value) => {
+  const getlocalStorage = value => {
     try {
-        return JSON.parse(localStorage.getItem(value))
+      return JSON.parse(localStorage.getItem(value))
     } catch (e) {
-        return ''
+      return ""
     }
-}
+  }
 
-  const setCheckoutItem = (checkout) => {
+  const setCheckoutItem = checkout => {
     if (isBrowser) {
       localStorage.setItem(localStorageKey, checkout.id)
     }
@@ -95,7 +95,7 @@ export const StoreProvider = ({ children }) => {
 
     return client.checkout
       .addLineItems(checkoutID, lineItemsToUpdate)
-      .then((res) => {
+      .then(res => {
         setCheckout(res)
         setLoading(false)
         setDidJustAddToCart(true)
@@ -108,7 +108,7 @@ export const StoreProvider = ({ children }) => {
 
     return client.checkout
       .removeLineItems(checkoutID, [lineItemID])
-      .then((res) => {
+      .then(res => {
         setCheckout(res)
         setLoading(false)
       })
@@ -123,7 +123,7 @@ export const StoreProvider = ({ children }) => {
 
     return client.checkout
       .updateLineItems(checkoutID, lineItemsToUpdate)
-      .then((res) => {
+      .then(res => {
         setCheckout(res)
         setLoading(false)
       })
@@ -140,15 +140,14 @@ export const StoreProvider = ({ children }) => {
         checkout,
         loading,
         didJustAddToCart,
-        customerAccessToken: getlocalStorage('customerAccessToken'),
+        customerAccessToken: getlocalStorage("customerAccessToken"),
         setValue: value => {
-          isBrowser && localStorage.setItem('customerAccessToken', JSON.stringify(value))
+          isBrowser &&
+            localStorage.setItem("customerAccessToken", JSON.stringify(value))
           updateStore(state => {
-              return { ...state, customerAccessToken: value }
+            return { ...state, customerAccessToken: value }
           })
-      }
-        
-        
+        },
       }}
     >
       {children}

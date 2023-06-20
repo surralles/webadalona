@@ -1,7 +1,7 @@
 import * as React from "react"
 
-import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp"
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown"
 import { wrap, increment, decrement, input } from "./numeric-input.module.css"
 export function NumericInput({
   onIncrement,
@@ -25,7 +25,7 @@ export function NumericInput({
         onClick={onIncrement}
       >
         <span>+</span>
-        < ArrowCircleUpIcon/>
+        <ArrowCircleUpIcon />
       </button>
       <button
         disabled={disabled}

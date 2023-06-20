@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Overlay = styled.div`
 
@@ -6,9 +6,9 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;
-  opacity: ${props => props.menuOpen ? '1' : '0'};
+  opacity: ${props => (props.menuOpen ? "1" : "0")};
   transform: ${props =>
-    props.menuOpen ? 'translateX(0%)' : 'translateX(-100%)'}; 
+    props.menuOpen ? "translateX(0%)" : "translateX(-100%)"}; 
     transition:all  0.3s ease;
     
   z-index:100000  ;
@@ -100,7 +100,7 @@ export const Overlay = styled.div`
     padding: 40px;
     color:#000
     transform: ${props =>
-      props.menuOpen ? 'translateX(-10%)' : 'translateX(-100%)'}; 
+      props.menuOpen ? "translateX(-10%)" : "translateX(-100%)"}; 
     
 
   
@@ -139,5 +139,4 @@ export const Overlay = styled.div`
     display:none
   }
 
-`;
-
+`

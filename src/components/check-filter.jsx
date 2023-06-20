@@ -50,7 +50,7 @@ export function CheckFilter({
         </summary>
       )}
       <div className={filterOptions}>
-        {items.map((item) => (
+        {items.map(item => (
           <label
             className={selectedItems.includes(item) ? selectedLabel : undefined}
             key={item}

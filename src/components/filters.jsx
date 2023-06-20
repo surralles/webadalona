@@ -17,7 +17,7 @@ export function Filters({
   setFilters,
 }) {
   const updateFilter = (key, value) => {
-    setFilters((filters) => ({ ...filters, [key]: value }))
+    setFilters(filters => ({ ...filters, [key]: value }))
   }
 
   const updateNumeric = (key, value) => {
@@ -35,7 +35,7 @@ export function Filters({
         name="Tipo"
         items={productTypes}
         selectedItems={filters.productTypes}
-        setSelectedItems={(value) => updateFilter("productTypes", value)}
+        setSelectedItems={value => updateFilter("productTypes", value)}
       />
       <hr />
       <details className={priceFilterStyle} open={true}>
@@ -46,7 +46,7 @@ export function Filters({
               <button
                 className={clearButton}
                 onClick={() =>
-                  setFilters((filters) => ({
+                  setFilters(filters => ({
                     ...filters,
                     maxPrice: "",
                     minPrice: "",
@@ -63,7 +63,7 @@ export function Filters({
             {...currencyCode}
             aria-label="Precio mínimo"
             value={filters.minPrice}
-            onChange={(event) =>
+            onChange={event =>
               updateNumeric("minPrice", event.currentTarget.value)
             }
           />{" "}
@@ -72,7 +72,7 @@ export function Filters({
             {...currencyCode}
             aria-label="Precio máximo"
             value={filters.maxPrice}
-            onChange={(event) =>
+            onChange={event =>
               updateNumeric("maxPrice", event.currentTarget.value)
             }
           />
@@ -83,7 +83,7 @@ export function Filters({
         name="Marcas"
         items={vendors}
         selectedItems={filters.vendors}
-        setSelectedItems={(value) => updateFilter("vendors", value)}
+        setSelectedItems={value => updateFilter("vendors", value)}
       />
       <hr />
       <CheckFilter
@@ -91,7 +91,7 @@ export function Filters({
         name="Tags"
         items={tags}
         selectedItems={filters.tags}
-        setSelectedItems={(value) => updateFilter("tags", value)}
+        setSelectedItems={value => updateFilter("tags", value)}
       />
     </>
   )

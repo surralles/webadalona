@@ -1,34 +1,28 @@
-import React, {useState} from 'react';
-import Header from '../Header/Header';
-import Hamburger from '../Hamburger/Hamburger';
-import OverlayMenu from '../OverlayMenu/OverlayMenu';
+import React, { useState } from "react"
+import Header from "../Header/Header"
+import Hamburger from "../Hamburger/Hamburger"
+import OverlayMenu from "../OverlayMenu/OverlayMenu"
 
-import Footer from '../Footer/Footer'
-import {GlobalStyles, Primary} from './Layout.styles';
+import Footer from "../Footer/Footer"
+import { GlobalStyles, Primary } from "./Layout.styles"
 
+const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
 
-const Layout = ({children}) =>{
-    const [menuOpen,setMenuOpen] = useState(false);
-    
-    const handleOverlayMenu = () => setMenuOpen (prev => !prev)
+  const handleOverlayMenu = () => setMenuOpen(prev => !prev)
 
+  return (
+    <>
+      <GlobalStyles />
 
-    return (
-        <>
-        
-        <GlobalStyles />
-        
-        <Hamburger handleOverlayMenu={handleOverlayMenu} />
-        <OverlayMenu menuOpen={ menuOpen } callback ={handleOverlayMenu} />
-        <Header/>
-        <Primary>{children}
-        
-        </Primary>
-        
-        <Footer/>
+      <Hamburger handleOverlayMenu={handleOverlayMenu} />
+      <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
+      <Header />
+      <Primary>{children}</Primary>
 
-        </>
-    )
+      <Footer />
+    </>
+  )
 }
 
-export default Layout;
+export default Layout

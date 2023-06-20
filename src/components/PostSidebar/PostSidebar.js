@@ -5,7 +5,6 @@ import { Wrapper, Menu } from "./PostSidebar.styles"
 const PostSidebar = ({ date, author, categories }) => (
   <Wrapper>
     <Menu>
-     
       <li className="sidebar-section">
         <span>{author}</span>
       </li>

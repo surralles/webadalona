@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
 import DeleteIcon from "../icons/delete"
 import { NumericInput } from "./numeric-input"
-import { useState, useContext, useCallback, useMemo } from "react";
+import { useState, useContext, useCallback, useMemo } from "react"
 import {
   title,
   remove,
@@ -16,12 +16,8 @@ import {
 } from "./line-item.module.css"
 
 export function LineItem({ item }) {
-  const {
-    removeLineItem,
-    checkout,
-    updateLineItem,
-    loading,
-  } = useContext(StoreContext)
+  const { removeLineItem, checkout, updateLineItem, loading } =
+    useContext(StoreContext)
   const [quantity, setQuantity] = useState(item.quantity)
 
   const variantImage = {
@@ -43,13 +39,13 @@ export function LineItem({ item }) {
   }
 
   const uli = debounce(
-    (value) => updateLineItem(checkout.id, item.id, value),
+    value => updateLineItem(checkout.id, item.id, value),
     300
   )
   // eslint-disable-next-line
-  const debouncedUli = useCallback((value) => uli(value), [])
+  const debouncedUli = useCallback(value => uli(value), [])
 
-  const handleQuantityChange = (value) => {
+  const handleQuantityChange = value => {
     if (value !== "" && Number(value) < 1) {
       return
     }
@@ -83,7 +79,7 @@ export function LineItem({ item }) {
   return (
     <tr>
       <td>
-      {image && (
+        {image && (
           <GatsbyImage
             key={variantImage.src}
             image={image}
@@ -110,7 +106,7 @@ export function LineItem({ item }) {
           aria-label="Quantity"
           onIncrement={doIncrement}
           onDecrement={doDecrement}
-          onChange={(e) => handleQuantityChange(e.currentTarget.value)}
+          onChange={e => handleQuantityChange(e.currentTarget.value)}
         />
       </td>
       <td className={totals}>{subtotal}</td>

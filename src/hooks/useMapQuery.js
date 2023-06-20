@@ -1,22 +1,17 @@
-import { useStaticQuery,graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
-export const useMapQuery =() =>{
-
-    const data = useStaticQuery(graphql`
-    query  {
-        staticMap {
+export const useMapQuery = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      staticMap {
         childFile {
-            childImageSharp {
-              gatsbyImageData(layout: FIXED)
-            }
+          childImageSharp {
+            gatsbyImageData(layout: FIXED)
+          }
         }
-    }
       }
-      
-    
-    `)
-    
-    return data
+    }
+  `)
+
+  return data
 }
-
-

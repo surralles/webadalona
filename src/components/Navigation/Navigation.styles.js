@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Wrapper = styled.nav`
-  font-family: 'Frank Ruhl Libre', Arial, Helvetica, sans-serif;
+  font-family: "Frank Ruhl Libre", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #212121;
   font-size: 1rem;
@@ -86,4 +86,4 @@ export const Wrapper = styled.nav`
       opacity: 1;
     }
   }
-`;
+`
